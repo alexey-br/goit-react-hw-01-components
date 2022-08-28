@@ -1,0 +1,37 @@
+.statistics {
+  margin: 15px;
+  text-align: center;
+  width: fit-content;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.title {
+  padding: 10px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.stat_list {
+  min-height: 60px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(60px, 1fr);
+}
+
+.item {
+  padding: 8px;
+}
+
+.label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.percentage {
+  font-size: 18px;
+  font-weight: 600;
+}

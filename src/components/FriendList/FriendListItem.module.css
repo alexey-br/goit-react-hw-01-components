@@ -1,0 +1,38 @@
+.item {
+  padding: 5px;
+  width: 200px;
+  height: 50px;
+  display: grid;
+  grid-template-columns: 20px 55px auto;
+  align-items: center;
+  justify-items: center;
+
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 5px;
+}
+
+.item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.status {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: red;
+}
+
+.isOnline {
+  composes: status;
+  background-color: green;
+}
+
+.avatar {
+  width: 45px;
+}
+
+.name {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
