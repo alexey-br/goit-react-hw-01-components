@@ -1,4 +1,6 @@
-.item {
+import styled from '@emotion/styled';
+
+export const FriendCard = styled.li`
   padding: 5px;
   width: 200px;
   height: 50px;
@@ -9,30 +11,25 @@
 
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 5px;
-}
 
-.item:not(:last-child) {
-  margin-bottom: 10px;
-}
+  :not(:last-child) {
+    margin-bottom: 10px;
+  }
+`;
 
-.status {
+export const Status = styled.span`
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: red;
-}
+  background-color: ${props => (props.isOnline ? 'green' : 'red')};
+`;
 
-.isOnline {
-  composes: status;
-  background-color: green;
-}
-
-.avatar {
+export const Avatar = styled.img`
   width: 45px;
-}
+`;
 
-.name {
+export const Name = styled.p`
   margin: 0;
   font-size: 18px;
   font-weight: 600;
-}
+`;
