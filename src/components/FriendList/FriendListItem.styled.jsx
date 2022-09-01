@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 export const FriendCard = styled.li`
-  padding: 5px;
+  padding: ${({ theme }) => theme.space[2]}px;
   width: 200px;
   height: 50px;
   display: grid;
@@ -9,19 +9,19 @@ export const FriendCard = styled.li`
   align-items: center;
   justify-items: center;
 
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  border-radius: 5px;
+  box-shadow: ${({ theme }) => theme.shadows.normal};
+  border-radius: ${({ theme }) => theme.radii.normal};
 
   :not(:last-child) {
-    margin-bottom: 10px;
+    margin-bottom: ${({ theme }) => theme.space[4]}px;
   }
 `;
 
 export const Status = styled.span`
   width: 10px;
   height: 10px;
-  border-radius: 50%;
-  background-color: ${props => (props.isOnline ? 'green' : 'red')};
+  border-radius: ${({ theme }) => theme.radii.round};
+  background-color: ${props => (props.isOnline ? props.theme.colors.accent : 'red')};
 `;
 
 export const Avatar = styled.img`
@@ -29,7 +29,7 @@ export const Avatar = styled.img`
 `;
 
 export const Name = styled.p`
-  margin: 0;
-  font-size: 18px;
-  font-weight: 600;
+  margin: ${({ theme }) => theme.space[0]}px;
+  font-size: ${({ theme }) => theme.fontSizes.m};
+  font-weight: ${({ theme }) => theme.fontWeights.bold};
 `;

@@ -1,53 +1,56 @@
 import styled from '@emotion/styled';
 
 export const Container = styled.div`
-  margin: 15px;
-  padding-top: 30px;
+  margin: ${props => props.theme.space[5]}px;
+  padding-top: ${props => props.theme.space[5]}px;
   max-width: 300px;
-  background-color: #f7f5f2;
+  background-color: ${props => props.theme.colors.background};
   text-align: center;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  border-radius: 5px;
+  box-shadow: ${props => props.theme.shadows.normal};
+  border-radius: ${props => props.theme.radii.normal};
 `;
 
 export const Avatar = styled.img`
   width: 100px;
-  border-radius: 50%;
+  border-radius: ${props => props.theme.radii.round};
 `;
 
 export const Name = styled.p`
-  margin: 15px 0 10px;
-  font-size: 22px;
-  font-weight: 600;
+  margin-top: ${props => props.theme.space[4]}px;
+  margin-bottom: ${props => props.theme.space[3]}px;
+  font-size: ${props => props.theme.fontSizes.l};
+  font-weight: ${props => props.theme.fontWeights.bold};
 `;
 
 export const Tag = styled.p`
-  margin: 0px 0 10px;
-  font-size: 16px;
-  color: dimgray;
+  margin-top: ${props => props.theme.space[0]}px;
+  margin-bottom: ${props => props.theme.space[3]}px;
+  font-size: ${props => props.theme.fontSizes.m};
+  color: ${props => props.theme.colors.text};
 `;
 
 export const Location = styled.p`
-  margin: 0px 0 15px;
-  font-size: 16px;
-  color: dimgray;
+  margin-top: ${props => props.theme.space[0]}px;
+  margin-bottom: ${props => props.theme.space[3]}px;
+  font-size: ${props => props.theme.fontSizes.m};
+  color: ${props => props.theme.colors.accent};
 `;
 
 export const Stats = styled.ul`
-  margin: 0;
-  padding: 0;
+  margin: ${props => props.theme.space[0]}px;
+  padding: ${props => props.theme.space[0]}px;
   list-style: none;
-  background-color: #e7e5e1;
-  border-top: 1px solid #30475e;
+  background-color: ${props => props.theme.colors.backgroundDark};
+  border-top: ${props => props.theme.borders.normal};
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 
   li {
-    padding: 10px;
+    padding: ${props => props.theme.space[3]}px;
   }
 
   li:not(:last-child) {
-    border-right: 1px solid #30475e;
+    border-right: ${props => props.theme.borders.normal};
   }
 `;
 
@@ -56,5 +59,5 @@ export const Label = styled.span`
 `;
 
 export const Quantity = styled.span`
-  font-weight: 600;
+  font-weight: ${props => props.theme.fontWeights.bold};
 `;

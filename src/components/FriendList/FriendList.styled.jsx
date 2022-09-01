@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 export const FriendListWrapper = styled.ul`
-  padding: 0;
-  margin: 15px;
+  padding: ${({ theme }) => theme.space[0]}px;
+  margin: ${({ theme }) => theme.space[5]}px;
   list-style: none;
 `;

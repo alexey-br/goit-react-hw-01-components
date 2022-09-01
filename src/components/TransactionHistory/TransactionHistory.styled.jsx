@@ -1,29 +1,28 @@
 import styled from '@emotion/styled';
 
 export const TransactionsTable = styled.table`
-  margin: 15px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin: ${({ theme }) => theme.space[5]}px;
+  box-shadow: ${({ theme }) => theme.shadows.normal};
   text-align: center;
   border-collapse: collapse;
-  border: 0px solid #3a5a40;
   text-transform: capitalize;
 
   tr:nth-child(even) {
-    background-color: #dad7cd;
+    background-color: ${({ theme }) => theme.colors.backgroundDark};
   }
 
   th {
-    padding: 10px;
+    padding: ${({ theme }) => theme.space[3]}px;
     width: 100px;
-    background-color: #588157;
-    font-weight: 500;
-    font-size: 18px;
-    color: white;
-    border: 1px solid #3a5a40;
+    background-color: ${({ theme }) => theme.colors.accent};
+    font-weight: ${({ theme }) => theme.fontWeights.bold};
+    font-size: ${({ theme }) => theme.fontSizes.m};
+    color: ${({ theme }) => theme.colors.white};
+    border: ${({ theme }) => theme.borders.normal};
   }
 
   td {
-    padding: 8px;
-    border: 1px solid #a7b3a9;
+    padding: ${({ theme }) => theme.space[3]}px;
+    border: ${({ theme }) => theme.borders.normal};
   }
 `;
