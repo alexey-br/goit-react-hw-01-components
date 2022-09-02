@@ -7,6 +7,8 @@ import data from '../data/data.json';
 import friends from '../data/friends.json';
 import transactions from '../data/transactions.json';
 
+import {Box} from './Box/Box'
+
 export const App = () => {
   return (
     <div>
@@ -21,6 +23,7 @@ export const App = () => {
       <Statistics stats={data} />
       <FriendList friends={friends} />
       <TransactionHistory items={transactions} />
+      <Box color='accent' m={'2px'}>Hello world</Box>
     </div>
   );
 };
