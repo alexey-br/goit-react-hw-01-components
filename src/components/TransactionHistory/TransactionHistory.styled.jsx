@@ -7,7 +7,7 @@ export const TransactionsTable = styled.table`
   border-collapse: collapse;
   text-transform: capitalize;
 
-  tr:nth-child(even) {
+  tr:nth-of-type(even) {
     background-color: ${({ theme }) => theme.colors.backgroundDark};
   }
 
