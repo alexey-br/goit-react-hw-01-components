@@ -1,10 +1,18 @@
 import PropTypes from 'prop-types';
-import { Avatar, Container, Name, Tag, Location, Stats, Label, Quantity } from './Prifile.styled';
-// import { Box } from '../Box/Box';
+import { Avatar, Name, Tag, Location, Stats, Label, Quantity } from './Prifile.styled';
+import { Box } from '../Box/Box';
 
 export default function Profile({ username, tag, location, avatar, stats }) {
   return (
-    <Container>
+    <Box
+      m={5}
+      pt={5}
+      maxWidth={300}
+      backgroundColor={'background'}
+      textAlign={'center'}
+      boxShadow={'normal'}
+      borderRadius={'normal'}
+    >
       <div>
         <Avatar src={avatar} alt={username + ' avatar'} />
         <Name>{username}</Name>
@@ -26,7 +34,7 @@ export default function Profile({ username, tag, location, avatar, stats }) {
           <Quantity>{stats.likes}</Quantity>
         </li>
       </Stats>
-    </Container>
+    </Box>
   );
 }
 

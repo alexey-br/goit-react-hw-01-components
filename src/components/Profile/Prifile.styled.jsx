@@ -1,15 +1,5 @@
 import styled from '@emotion/styled';
 
-export const Container = styled.div`
-  margin: ${props => props.theme.space[5]}px;
-  padding-top: ${props => props.theme.space[5]}px;
-  max-width: 300px;
-  background-color: ${props => props.theme.colors.background};
-  text-align: center;
-  box-shadow: ${props => props.theme.shadows.normal};
-  border-radius: ${props => props.theme.radii.normal};
-`;
-
 export const Avatar = styled.img`
   width: 100px;
   border-radius: ${props => props.theme.radii.round};

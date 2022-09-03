@@ -4,6 +4,7 @@ export const FriendCard = styled.li`
   padding: ${({ theme }) => theme.space[2]}px;
   width: 200px;
   height: 50px;
+  list-style: none;
   display: grid;
   grid-template-columns: 20px 55px auto;
   align-items: center;

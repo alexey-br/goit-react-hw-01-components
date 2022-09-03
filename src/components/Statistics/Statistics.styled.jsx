@@ -1,12 +1,5 @@
 import styled from '@emotion/styled';
 
-export const StatisticsWrapper = styled.section`
-  margin: ${({ theme }) => theme.space[5]}px;
-  text-align: center;
-  width: fit-content;
-  box-shadow: ${({ theme }) => theme.shadows.normal}; ;
-`;
-
 export const Title = styled.h2`
   padding: ${({ theme }) => theme.space[3]}px;
   text-transform: uppercase;

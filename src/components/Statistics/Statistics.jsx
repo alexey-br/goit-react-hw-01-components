@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
 import getRandomHexColor from '../utils/getRandomHexColor';
-import { StatisticsWrapper, Title, StatList, Item, Label, Percentage } from './Statistics.styled';
+import { Title, StatList, Item, Label, Percentage } from './Statistics.styled';
+import { Box } from '../Box/Box';
 
 export default function Statistics({ title, stats }) {
   return (
-    <StatisticsWrapper>
+    <Box as={'section'} m={5} textAlign={'center'} width={'fit-content'} boxShadow={'normal'}>
       {title && <Title>{title}</Title>}
 
       <StatList>
@@ -15,7 +16,7 @@ export default function Statistics({ title, stats }) {
           </Item>
         ))}
       </StatList>
-    </StatisticsWrapper>
+    </Box>
   );
 }
 

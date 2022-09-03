@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
 import FriendListItem from '../FriendListItem/FriendListItem';
-import { FriendListWrapper } from './FriendList.styled';
+import { Box } from 'components/Box/Box';
 
 export default function FriendList({ friends }) {
   return (
-    <FriendListWrapper>
+    <Box as={'ul'} p={0} m={5}>
       {friends.map(({ id, avatar, name, isOnline }) => (
         <FriendListItem key={id} avatar={avatar} name={name} isOnline={isOnline} />
       ))}
-    </FriendListWrapper>
+    </Box>
   );
 }
 
